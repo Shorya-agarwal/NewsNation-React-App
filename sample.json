@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import NewsItem from './NewsItem'
-
-export class News extends Component {
-    articles = [
+{
+    "status": "ok",
+    "totalResults": 5,
+    "articles": [
         {
             "source": {
                 "id": "ign",
@@ -48,37 +47,25 @@ export class News extends Component {
                 "name": "Reddit /r/all"
             },
             "author": null,
-            "title": "\rshittymoviedetails - In the early days of the MCU, many actors had to go shirtless in order to save costs on the wardrobe budget",
+            "title": "r/shittymoviedetails - In the early days of the MCU, many actors had to go shirtless in order to save costs on the wardrobe budget",
             "description": "19,372 votes and 470 comments so far on Reddit",
             "url": "https://www.reddit.com/r/shittymoviedetails/comments/rk6uq5/in_the_early_days_of_the_mcu_many_actors_had_to/",
             "urlToImage": "https://preview.redd.it/5kbde531nk681.jpg?auto=webp&s=61d38f93ba125f19a27ed2e191b2e977ca983113",
             "publishedAt": "2021-12-20T04:22:44.7519944Z",
             "content": "To be fair, Hugh Jackman took it to another level. In the first movie, he just looks like a normal dude, then by the 2nd or 3rd Wolverine movie, he was so jacked and tan, he looked like a fucking sad… [+80 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch-cn",
+                "name": "TechCrunch (CN)"
+            },
+            "author": "Brian Heater",
+            "title": "盘点 2019 年消失的明星创业公司 | TechCrunch 中文版",
+            "description": "创业公司会因为各种原因而失败，但有一点不会改变：创业是极其困难的事。想要创办一家成功的公司，需要的不仅仅是热情，以及找到合适的人才（尽管很明显这两点很重要）。成功的创业者需要在许许多多细节上做到完美。\r\n\r\n粗略地回顾下今年的创业公司，可以发现并没有什么公司能带来像去年Theranos那样的轰动性故事。Theranos的故事被写成了畅销书，改编成了纪录片，相关电影也即将上映。不过某些公司，例如MoviePass，可能已经逐渐接近。\r\n\r\n通常来说，每看到一家Theranos，我们同时也会看到数十位辛勤创业者的故事…",
+            "url": "https://techcrunch.cn/2019/12/27/startups-lost-in-2019/",
+            "urlToImage": "https://files.techcrunch.cn/2019/12/gettyimages-829632570.jpg?w=1200",
+            "publishedAt": "2019-12-27T16:46:58Z",
+            "content": "Theranos Theranos MoviePass\r\n Theranos\r\n 2019 \r\nAnki2010 2019 \r\n1.82 \r\n2013 WWDC Overdrive iPhone \r\n3 Anki CozmoAnki 2018 Vector 2019 4 Anki 150 “”Cozmo \r\nChariot2014 2019 \r\n300 2017 \r\nChariot “” \r\n … [+1085 chars]"
         }
     ]
-    constructor(){
-        super();
-        this.state = {
-            articles:this.articles,
-            loading: false
-        }
-     }
-    render() {
-        return (
-            <div className="container my-3">
-                <h2>NewsNation - Top Headline for you</h2>
-                
-                <div className="row">
-                {this.state.articles.map((element)=>{
-                    return <div className="col-md-4" key ={element.url}>
-                    <NewsItem  title = {element.title.slice(0,45)} imgUrl = {element.urlToImage} description = {element.description.slice(0,90)} newsUrl = {element.url} />
-                </div>
-                })}
-                    
-                </div>
-            </div>
-        )
-    }
 }
-
-export default News
